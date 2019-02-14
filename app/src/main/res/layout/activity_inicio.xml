@@ -1,0 +1,130 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+android:id="@+id/contenedor"
+
+    tools:context=".MapsActivity"
+    android:orientation="vertical">
+
+    <!--tools:ignore="UnusedAttribute"-->
+    <!--android:background="?attr/colorPrimary"
+    md_blue_grey_900-->
+
+    <!--  <div>Icons made by <a href="http://www.flaticon.com/authors/iconnice" title="Iconnice">Iconnice</a>
+          from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"
+              title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+              <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by
+              <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+      -->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:elevation="2dp"
+        tools:ignore="UnusedAttribute"
+
+        />
+
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:theme="@style/TabHosTheme"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:baselineAligned="false"/>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+
+                    >
+
+                    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                              xmlns:map="http://schemas.android.com/apk/res-auto"
+                              xmlns:tools="http://schemas.android.com/tools"
+                              android:id="@+id/map"
+                              android:name="com.google.android.gms.maps.SupportMapFragment"
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              tools:context="com.antonioejemplo.localizaciones.MapsActivity"
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                              xmlns:map="http://schemas.android.com/apk/res-auto"
+                              xmlns:tools="http://schemas.android.com/tools"
+                              android:id="@+id/map2"
+                              android:name="com.google.android.gms.maps.SupportMapFragment"
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              tools:context="com.antonioejemplo.localizaciones.MapsActivity"
+                        />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/tab3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                              xmlns:map="http://schemas.android.com/apk/res-auto"
+                              xmlns:tools="http://schemas.android.com/tools"
+                              android:id="@+id/map3"
+                              android:name="com.google.android.gms.maps.SupportMapFragment"
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              tools:context="com.antonioejemplo.localizaciones.MapsActivity"
+                        />
+                </LinearLayout>
+
+                <!--  <LinearLayout android:id="@+id/tab4"
+                      android:orientation="vertical"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent" >
+
+
+                      <include layout="@layout/lista_usuarios"/>
+
+
+
+                  </LinearLayout>-->
+
+
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+</LinearLayout>
